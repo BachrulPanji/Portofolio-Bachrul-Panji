@@ -1,9 +1,3 @@
-Berikut adalah template dasar untuk README GitHub yang berkaitan dengan portofolio pribadi Anda sebagai pengembang web front-end dengan fokus pada **keamanan siber** dan **ethical hacking**. Anda bisa menyesuaikan isinya sesuai dengan preferensi dan proyek-proyek yang ingin Anda tampilkan.
-
----
-
-# Bachrul's Portfolio
-
 👋 Hi, I’m **Bachrul**, a passionate front-end developer with expertise in **cybersecurity** and **ethical hacking**. My mission is to create responsive, visually stunning websites while ensuring they are secure from potential cyber threats. This portfolio showcases the projects I have worked on, blending creative web design with strong security principles.
 
 ## 🛠 Skills and Technologies
