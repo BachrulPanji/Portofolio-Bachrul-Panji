@@ -1,42 +1,39 @@
-👋 Hi, I’m **Bachrul**, a passionate front-end developer with expertise in **cybersecurity** and **ethical hacking**. My mission is to create responsive, visually stunning websites while ensuring they are secure from potential cyber threats. This portfolio showcases the projects I have worked on, blending creative web design with strong security principles.
+👋 Halo, saya **Bachrul**, seorang pengembang front-end yang bersemangat dengan keahlian dalam **keamanan siber** dan **ethical hacking**. Misi saya adalah menciptakan situs web yang responsif dan menawan secara visual, sambil memastikan bahwa situs tersebut aman dari potensi ancaman siber. Portofolio ini menampilkan proyek-proyek yang telah saya kerjakan, menggabungkan desain web kreatif dengan prinsip keamanan yang kuat.
 
-## 🛠 Skills and Technologies
+## 🛠 Keterampilan dan Teknologi
 
-- **Front-End Development**: HTML, CSS, JavaScript,
-- **Cybersecurity**: Vulnerability assessment, Penetration testing, Ethical hacking
-- **Tools**: Git, VS Code, Webpack, Nmap, Wireshark, OWASP ZAP
-- **Security Best Practices**: OWASP Top 10, Secure coding, Data protection
-- **Other Technologies**: SASS, Bootstrap, Tailwind CSS
+- **Pengembangan Front-End**: HTML, CSS, JavaScript, React.js, Vue.js
+- **Keamanan Siber**: Penilaian kerentanan, Pengujian penetrasi, Ethical hacking
+- **Alat**: Git, VS Code, Webpack, Nmap, Wireshark, OWASP ZAP
+- **Praktik Keamanan Terbaik**: OWASP Top 10, Kode yang aman, Perlindungan data
+- **Teknologi Lain**: SASS, Bootstrap, Tailwind CSS
 
-## 🌟 Projects
+## 🌟 Proyek
 
-Here are some of my favorite projects that showcase both my front-end development skills and my focus on web security.
+Berikut adalah beberapa proyek favorit saya yang menunjukkan keterampilan pengembangan front-end saya dan fokus pada keamanan web.
 
-### 1. **Secure Portfolio Website**
-- **Description**: A personal portfolio site designed to display my work while following the best practices in web security (e.g., secure headers, content security policies).
-- **Technologies**: HTML, CSS, JavaScript, SSL/TLS for secure connection
-- **Focus**: Secure user authentication and secure cookie handling.
+### 1. **Situs Portofolio yang Aman**
+- **Deskripsi**: Situs portofolio pribadi yang dirancang untuk menampilkan karya saya sambil mengikuti praktik terbaik dalam keamanan web (misalnya, header yang aman, kebijakan keamanan konten).
+- **Teknologi**: HTML, CSS, JavaScript, SSL/TLS untuk koneksi yang aman
+- **Fokus**: Autentikasi pengguna yang aman dan penanganan cookie yang aman.
 
-### 2. **E-commerce Platform with Security Features**
-- **Description**: A simple e-commerce platform that includes essential security features such as encryption, secure user input handling, and protection against SQL injection.
-- **Technologies**: React.js, Node.js, Express, MongoDB
-- **Focus**: Application of OWASP top 10 principles and real-time vulnerability monitoring.
+### 2. **Platform E-commerce dengan Fitur Keamanan**
+- **Deskripsi**: Sebuah platform e-commerce sederhana yang mencakup fitur keamanan penting seperti enkripsi, penanganan input pengguna yang aman, dan perlindungan terhadap SQL injection.
+- **Teknologi**: React.js, Node.js, Express, MongoDB
+- **Fokus**: Penerapan prinsip OWASP top 10 dan pemantauan kerentanan secara real-time.
 
-### 3. **Penetration Testing Simulation**
-- **Description**: A simulated web application environment designed to showcase common web vulnerabilities and how they can be patched.
-- **Technologies**: PHP, MySQL, Metasploit, OWASP ZAP
-- **Focus**: Identification and remediation of vulnerabilities, including XSS, CSRF, and SQL Injection.
+### 3. **Simulasi Pengujian Penetrasi**
+- **Deskripsi**: Lingkungan aplikasi web simulasi yang dirancang untuk menampilkan kerentanan web umum dan cara memperbaikinya.
+- **Teknologi**: PHP, MySQL, Metasploit, OWASP ZAP
+- **Fokus**: Identifikasi dan remediasi kerentanan, termasuk XSS, CSRF, dan SQL Injection.
 
-## 🚀 Goals
-My long-term goal is to continue refining my development skills while helping companies build secure, user-friendly web applications that meet the highest security standards.
+## 🚀 Tujuan
+Tujuan jangka panjang saya adalah terus meningkatkan keterampilan pengembangan saya sambil membantu perusahaan membangun aplikasi web yang aman dan ramah pengguna, yang memenuhi standar keamanan tertinggi.
 
-## 📫 Let's Connect
+## 📫 Mari Terhubung
 
-Feel free to reach out if you'd like to collaborate on a project or discuss anything related to web development and cybersecurity!
+Jangan ragu untuk menghubungi saya jika Anda ingin berkolaborasi dalam sebuah proyek atau mendiskusikan apa pun terkait pengembangan web dan keamanan siber!
 
-- **GitHub**:
-- **LinkedIn**:
-
----
-
-Feel free to adjust the project descriptions, technologies, and links to fit your real portfolio and projects!
+- **GitHub**: [GitHub Bachrul](https://github.com/bachrul0038)
+- **LinkedIn**: [LinkedIn Bachrul](https://linkedin.com/in/bachrulpanji)
+- **Email**: [your.email@example.com](bachrulpanji0038@gmail.com)
