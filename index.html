@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="SRC/style/style.css">
+    <link rel="icon" href="Assets/favicons/favicon.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+
+    <!-- Hello -->
+    <header class="header" id="header">
+        <a href="index.html" class="logo"><span class="main-icon"></span><span>Bachrul Panji</span></a>
+
+        <div class="navbar">
+            <a href="./index.html" class="active">Home</a>
+            <a href="./SRC/pages/skills.html">Skills</a>
+            <a href="./SRC/pages/MyProject.html">MyProject</a>
+            <a href="./SRC/pages/gallery.html">Gallery</a>
+            <a href="./SRC/pages/career.html">Career</a>
+            <a href="./SRC/pages/hobbies.html">Hobbies</a>
+            <a href="./SRC/pages/testimonials.html">Testimonials</a>
+        </div>
+
+        <div class="main">
+            <a href="SRC/pages/contact.html" class="user main-items"><i class="fas fa-envelope cm-icon"></i>Contact
+                Me</a>
+            <div class="main-items menu-icon-container" id="menu-icon-js">
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        <section class="about" id="about">
+            <div class="about-content">
+                <div class="column right">
+                    <img src="./Assets/fotbar.jpg" alt="">
+                </div>
+                <div class="column left">
+                    <div class="text">I'm Bachrul Panji and I'm a <span id="typed" class="iAm"></span></div>
+                    <p>
+                        Seorang pengembang front-end web dengan hasrat yang mendalam untuk keamanan
+                        siber dan etika
+                        peretasan. Dengan kombinasi kreativitas, keterampilan teknis yang kuat, dan fokus pada keamanan,
+                        Bachrul mengkhususkan diri dalam mengembangkan antarmuka web yang responsif dan aman, dengan
+                        tetap menjaga data
+                        integritas data dan melindungi aplikasi dari potensi ancaman siber. Keahliannya di bidang
+                        front-end
+                        pengembangan, keamanan siber, dan peretasan etis memungkinkan Bachrul untuk mengubah ide menjadi
+                        aman
+                        dan solusi web yang fungsional secara visual.
+                    </p>
+                    <div class="buttons">
+                        <a href="#">Download CV</a>
+                        <a href="SRC/pages/contact.html" class="cm-button">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="left">
+                &copy; 2024 • BPG • All Rights Reserved
+            </div>
+            <div class="right">
+                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="nav-touch-close" id="nav-tc-js"></div>
+
+    <script type="text/javascript" src="./SRC/script/script.js"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            strings: ['Ethical Hacking', 'Web Dev', 'Front end Web'],
+            typeSpeed: 55,
+        });
+    </script>
+
+</body>
+
+</html>
