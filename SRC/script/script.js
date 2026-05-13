@@ -3,164 +3,182 @@ let menuicon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let navtc = document.querySelector("#nav-tc-js");
 
-menu.onclick = () => {
-  menuicon.classList.toggle("bx-x");
-  navbar.classList.toggle("open");
-  navtc.classList.toggle("nav-touch-close-open");
-};
+if (menu) {
+  menu.onclick = () => {
+    menuicon.classList.toggle("bx-x");
+    navbar.classList.toggle("open");
+    navtc.classList.toggle("nav-touch-close-open");
+  };
+}
 
-navtc.onclick = () => {
-  menuicon.classList.toggle("bx-x");
-  navbar.classList.remove("open");
-  navtc.classList.remove("nav-touch-close-open");
-  navtc.classList.remove("nav-tc-z");
-  navtc.classList.remove("nav-LR-TC");
-};
+if (navtc) {
+  navtc.onclick = () => {
+    menuicon.classList.toggle("bx-x");
+    navbar.classList.remove("open");
+    navtc.classList.remove("nav-touch-close-open");
+    navtc.classList.remove("nav-tc-z");
+    navtc.classList.remove("nav-LR-TC");
+  };
+}
 
-/* Saat pengguna menggulir ke bawah, sembunyikan navbar. Saat pengguna menggulir ke atas, tampilkan navbar */
+/* Navbar scroll logic */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
-
-  document.getElementById("header").classList.add("scrolled");
-  if (currentScrollPos === 0) {
-    // console.log("Hello");
-    document.getElementById("header").classList.remove("scrolled");
-  }
-  if (navtc.classList.contains("nav-touch-close-open")) {
-    return;
-  }
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
-  } else {
-    document.getElementById("header").style.top = "-100px";
+  const header = document.getElementById("header");
+  if (header) {
+    header.classList.add("scrolled");
+    if (currentScrollPos === 0) {
+      header.classList.remove("scrolled");
+    }
+    if (navtc && navtc.classList.contains("nav-touch-close-open")) {
+      return;
+    }
+    if (prevScrollpos > currentScrollPos) {
+      header.style.top = "0";
+    } else {
+      header.style.top = "-100px";
+    }
   }
   prevScrollpos = currentScrollPos;
 };
 
+// Contact Form Elements
+const contactForm = document.getElementById("contact-form");
 const contactSection = document.querySelector(".contact-section");
 const formSection = document.querySelector(".form-section");
 const contactSubmitAfter = document.querySelector(".contact-submit-after");
 const csaOK = document.querySelector(".csa-ok");
 
-const contactForm = document.querySelector(".contact-form");
 const nameInput = document.getElementById("name");
-const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject"); // Changed from email
 const messageInput = document.getElementById("message");
 const errorDiv = document.querySelector(".error");
-const emailErrorDiv = document.querySelector(".email-error");
-const contactButton = document.querySelector(".contact-button");
+const contactButton = document.getElementById("contact-submit");
 const contactLoad = document.querySelector(".contact-load");
 const submitText = document.querySelector(".submit-text");
 
 if (csaOK) {
   csaOK.onclick = () => {
-    contactSubmitAfter.classList.remove("show");
-    formSection.classList.remove("hide");
-    contactSection.classList.remove("csa-cs");
-    contactForm.classList.remove("csa-cf");
-    contactButton.classList.remove("loading");
-    contactLoad.classList.remove("show");
-    submitText.classList.remove("hide");
-    // contactSubmitAfter.classList.add('hide');
+    if (contactSubmitAfter) contactSubmitAfter.style.display = "none";
+    if (formSection) formSection.style.display = "block";
+    if (contactButton) contactButton.classList.remove("loading");
+    if (contactLoad) contactLoad.style.display = "none";
+    if (submitText) submitText.style.display = "inline-block";
   };
 }
 
-//fungsi untuk validasi data
+// Form Validation
 function validateForm(event) {
-  event.preventDefault(); // Prevent the form from submitting
+  event.preventDefault();
   let isValid = true;
-  emailIsValid = true;
-  nameIsValid = true;
-  messageIsValid = true;
+  let nameIsValid = true;
+  let subjectIsValid = true;
+  let messageIsValid = true;
 
-  // Periksa apakah bidang Nama kosong
-  if (nameInput.value.trim() === "") {
+  if (!nameInput || nameInput.value.trim() === "") {
     isValid = false;
     nameIsValid = false;
   }
 
-  // Periksa apakah bidang Email kosong atau bukan alamat email yang valid
-  if (emailInput.value.trim() === "" || !isValidEmail(emailInput.value)) {
+  if (!subjectInput || subjectInput.value.trim() === "") {
     isValid = false;
-    if (emailInput.value.trim() !== "" && !isValidEmail(emailInput.value)) {
-      emailIsValid = false;
-    }
+    subjectIsValid = false;
   }
 
-  // Periksa apakah bidang Pesan kosong
-  if (messageInput.value.trim() === "") {
+  if (!messageInput || messageInput.value.trim() === "") {
     isValid = false;
     messageIsValid = false;
   }
 
   if (!isValid) {
-    // Display the error message
-    errorDiv.classList.add("error-show");
-    emailErrorDiv.classList.remove("error-show");
-    if (nameIsValid && messageIsValid && !emailIsValid) {
-      errorDiv.classList.remove("error-show");
-      emailErrorDiv.classList.add("error-show");
+    if (errorDiv) {
+      errorDiv.style.display = "block";
     }
   } else {
-    // Form is valid, it can be sumbitted now
-    emailErrorDiv.classList.remove("error-show");
-    errorDiv.classList.remove("error-show");
-    contactButton.classList.add("loading");
-    contactLoad.classList.add("show");
-    submitText.classList.add("hide");
+    if (errorDiv) errorDiv.style.display = "none";
+    
+    if (contactButton) contactButton.classList.add("loading");
+    if (contactLoad) contactLoad.style.display = "inline-block";
+    if (submitText) submitText.style.display = "none";
+    
     setTimeout(function () {
       sendMail();
-    }, 2000);
+    }, 1000);
   }
 }
 
-// Function to validate email format using a regular expression
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-// Event listener for form submission
 if (contactForm) {
   contactForm.addEventListener("submit", validateForm);
 }
 
-// After adding the Email Js APi key in the script tag of the contact.html, uncomment this function section
+// AJAX Submission to Formspree
+async function sendMail() {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+  
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => (data[key] = value));
 
-function sendMail() {
-  // Remove this section after adding the Email Js APi key in the script tag of the contact.html, uncomment this function section
-  // From this
-  contactSubmitAfter.classList.add("show");
-  formSection.classList.add("hide");
-  contactSection.classList.add("csa-cs");
-  contactForm.classList.add("csa-cf");
-  // To this
+  try {
+    const response = await fetch("https://formspree.io/f/xbdqdnnr", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    });
 
-  // var params = {
-  // 	name: document.getElementById('name').value,
-  // 	email: document.getElementById('email').value,
-  // 	message: document.getElementById('message').value
-  // }
+    if (response.ok) {
+      if (contactButton) contactButton.classList.remove("loading");
+      if (contactLoad) contactLoad.style.display = "none";
+      if (submitText) submitText.style.display = "inline-block";
+      
+      if (nameInput) nameInput.value = "";
+      if (subjectInput) subjectInput.value = "";
+      if (messageInput) messageInput.value = "";
 
-  // const serviceID = "service_evf2wim";
-  // const templateID = "template_v085uvl";
-
-  // emailjs.send(serviceID, templateID, params)
-  // 	.then(
-  // 		res => {
-  // 			document.getElementById('name').value = "";
-  // 			document.getElementById('email').value = "";
-  // 			document.getElementById('message').value = "";
-
-  // 			contactSubmitAfter.classList.add('show');
-  // 			formSection.classList.add('hide');
-  // 			contactSection.classList.add('csa-cs');
-  // 			contactForm.classList.add('csa-cf');
-
-  // 		}
-  // 	)
-  // 	.catch((error) => {
-  // 		console.log(error);
-  // 	})
+      if (contactSubmitAfter) {
+        contactSubmitAfter.style.display = "block";
+        if (formSection) formSection.style.display = "none";
+      } else {
+        alert("Pesan terkirim! Terima kasih telah menghubungi saya.");
+      }
+    } else {
+      const errorData = await response.json();
+      throw new Error(errorData.error || "Gagal mengirim pesan.");
+    }
+  } catch (error) {
+    console.error("Submission error:", error);
+    alert("Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti.");
+    if (contactButton) contactButton.classList.remove("loading");
+    if (contactLoad) contactLoad.style.display = "none";
+    if (submitText) submitText.style.display = "inline-block";
+  }
 }
+
+// Certificate Modal Functions
+function openCertModal(imageSrc) {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("certImage");
+    if (modal && modalImg) {
+        modal.style.display = "flex";
+        modalImg.src = imageSrc;
+    }
+}
+
+function closeCertModal() {
+    const modal = document.getElementById("certModal");
+    if (modal) {
+        modal.style.display = "none";
+    }
+}
+
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById("certModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});

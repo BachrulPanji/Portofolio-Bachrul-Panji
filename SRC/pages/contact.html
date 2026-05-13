@@ -1,33 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Me</title>
+    <title>Contact Me | Bachrul Panji</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="icon" href="../../Assets/favicons/favicon.png" type="image/png" sizes="32x32">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Internal CSS: Synchronized with Site Architecture -->
+    <style>
+        /* Force Page to grow naturally (Fixing style.css conflict) */
+        .page {
+            height: auto !important;
+            min-height: 100vh !important;
+            display: block !important;
+            /* Override flex if needed */
+        }
+
+        .contact-main-sync {
+            width: 100%;
+            padding-top: 150px;
+            /* Matches About & Testimonials */
+            padding-bottom: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-content-area {
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-header-sync {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .contact-header-sync h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .header-line-sync {
+            width: 80px;
+            height: 4px;
+            background-color: var(--main-color);
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        .contact-flex-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Card Style Matching .hobbies and .block in style.css */
+        .sync-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            outline: 2px solid #ccc;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sync-sidebar {
+            flex: 1;
+            min-width: 320px;
+            max-width: 400px;
+        }
+
+        .sync-form-area {
+            flex: 1.5;
+            min-width: 350px;
+        }
+
+        .info-row-sync {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+        }
+
+        .info-row-sync i {
+            font-size: 1.5rem;
+            color: var(--main-color);
+        }
+
+        .info-text-sync p {
+            font-weight: 600;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .info-text-sync span {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .social-sync {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-sync a {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            transition: 0.3s;
+        }
+
+        .social-sync a:hover {
+            color: var(--main-color);
+            transform: scale(1.1);
+        }
+
+        /* Form Logic */
+        .form-group-sync {
+            margin-bottom: 20px;
+        }
+
+        .form-group-sync label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group-sync input,
+        .form-group-sync textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            font-family: inherit;
+        }
+
+        .form-group-sync input:focus,
+        .form-group-sync textarea:focus {
+            outline: 2px solid var(--main-color);
+            border: none;
+        }
+
+        .btn-sync {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--main-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-sync:hover {
+            background-color: #4e54c8;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 900px) {
+            .contact-flex-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sync-sidebar,
+            .sync-form-area {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
     <header class="header" id="header">
-        <a href="../../index.html" class="logo"><span class="main-icon"></span><span>Baachrul Panji</span></a>
-
+        <a href="../../index.html" class="logo"><span class="main-icon"></span><span>Bachrul Panji</span></a>
         <div class="navbar">
             <a href="../../index.html">Home</a>
-            <a href="../../SRC/pages/skills.html">skills</a>
-            <a href="../../SRC/pages/MyProject.html" class="active">My Project</a>
-            <a href="../../SRC/pages/gallery.html">Gallery</a>
-            <a href="../../SRC/pages/career.html">Career</a>
-            <a href="../../SRC/pages/hobbies.html">Hobbies</a>
-            <a href="../../SRC/pages/testimonials.html">Testimonials</a>
+            <a href="skills.html">Skills</a>
+            <a href="MyProject.html">MyProject</a>
+            <a href="gallery.html">Layanan</a>
+            <a href="career.html">Career</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="testimonials.html">Penghargaan</a>
         </div>
-
         <div class="main">
             <a href="contact.html" class="user main-items active"><i class="fas fa-envelope cm-icon"></i>Contact Me</a>
             <div class="main-items menu-icon-container" id="menu-icon-js">
@@ -37,104 +213,113 @@
     </header>
 
     <div class="page">
-        <main class="contact-main">
-            <div class="contact-full">
-                <div class="contact-section">
-                    <div class="cs-top mobile-show">
-                        <h1>Reach Me</h1>
-                        <div class="border-line"></div>
-                    </div>
-                    <div class="cs-item email">
-                        <div class="icon"><i class="fas fa-envelope"></i></div>
-                        <div class="text">
-                            <div class="placeHolder">E-mail</div>
-                            <div class="info">bachrulpanji0038@gmail.com</div>
+        <main class="contact-main-sync">
+            <div class="contact-content-area contact-section">
+
+                <div class="contact-header-sync">
+                    <h1>Silahkan Hubungi kami</h1>
+                    <div class="header-line-sync"></div>
+                </div>
+
+                <div class="contact-flex-container form-section">
+                    <!-- Sidebar -->
+                    <aside class="sync-card sync-sidebar">
+                        <div class="info-row-sync">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info-text-sync">
+                                <span>Email Me</span>
+                                <p>bachrulpanji0038@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="cs-item number">
-                        <div class="icon"><i class="fas fa-phone"></i></i></div>
-                        <div class="text">
-                            <div class="placeHolder">Phone</div>
-                            <div class="info">+6281220463587</div>
+
+                        <div class="info-row-sync">
+                            <i class="fab fa-instagram"></i>
+                            <div class="info-text-sync">
+                                <span>Follow Instagram</span>
+                                <p>@bagol28</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="cs-item address">
-                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="text">
-                            <div class="placeHolder">Address</div>
-                            <div class="info">Subang,Griya Cipaku,Kab.Subang</div>
+
+                        <div class="info-row-sync">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info-text-sync">
+                                <span>Current Location</span>
+                                <p>Subang, Jawa Barat</p>
+                            </div>
                         </div>
+
+                        <div class="social-sync">
+                            <a href="https://www.instagram.com/bachrul_panji_gumilang/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://id.linkedin.com/in/bachrul-panji-gumilang-92a1621ba" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/BachrulPanji" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </aside>
+
+                    <!-- Form Card -->
+                    <section class="sync-card sync-form-area">
+                        <form id="contact-form" novalidate>
+                            <div class="form-group-sync">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+                            </div>
+                            <div class="form-group-sync">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Masukkan subjek pesan"
+                                    required>
+                            </div>
+                            <div class="form-group-sync">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="error"
+                                style="color: #ff4d4d; font-size: 0.8rem; margin-bottom: 15px; display: none;">Harap isi
+                                semua kolom</div>
+
+                            <button type="submit" id="contact-submit" class="btn-sync contact-button">
+                                <span class="submit-text">Kirim Pesan</span>
+                                <i class="fas fa-spinner fa-spin contact-load"
+                                    style="display: none; margin-left: 10px;"></i>
+                            </button>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- Success Message -->
+                <div class="contact-submit-after" style="display: none; text-align: center; width: 100%;">
+                    <div class="sync-card" style="max-width: 500px; margin: 0 auto;">
+                        <i class="fas fa-check-circle"
+                            style="font-size: 4rem; color: #4BB543; margin-bottom: 20px;"></i>
+                        <h2 style="margin-bottom: 10px;">Berhasil Terkirim!</h2>
+                        <p style="opacity: 0.8; margin-bottom: 30px;">Terima kasih atas pesan Anda. Saya akan segera
+                            menghubungi Anda kembali.</p>
+                        <button class="csa-ok btn-sync" style="max-width: 150px;">OK</button>
                     </div>
                 </div>
-                <section class="contact-form">
-                    <h1>Contact Me</h1>
-                    <div class="border-line"></div>
-                    <!-- <p>Feel free to get in touch with me by filling out the form below.</p> -->
-                    <div class="contact-submit-after">
-                        <div class="box">
-                            <i class="fa-solid fa-circle-check csa-icon"></i>
-                            <div class="csa-text">Message sent successfully</div>
-                            <div class="csa-ok">OK</div>
-                        </div>
-                    </div>
-                    <form id="contact-form" class="form-section" novalidate>
-                        <div class="form-group name-section">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="error"><i class="fa-solid fa-circle-xmark error-icon"></i>Please fill out all the
-                            fields
-                        </div>
-                        <div class="email-error"><i class="fa-solid fa-circle-xmark error-icon"></i>Email address is not
-                            valid</div>
-                        <button type="submit" id="contact-submit" class="contact-button">
-                            <div class="contact-load">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="submit-text">
-                                Submit
-                            </div>
-                        </button>
-                    </form>
-                </section>
+
             </div>
         </main>
+
         <footer class="footer">
-            <div class="left">
-                &copy; 2023 • BPG • All Rights Reserved
-            </div>
+            <div class="left">&copy; 2024 • BPG • All Rights Reserved</div>
             <div class="right">
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="social"><a href="https://www.youtube.com/@BachrulPanji" target="_blank"><i
+                            class="fa-brands fa-youtube"></i></a></div>
+                <div class="social"><a href="https://www.instagram.com/bachrul_panji_gumilang/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></div>
+                <div class="social"><a href="https://id.linkedin.com/in/bachrul-panji-gumilang-92a1621ba"
+                        target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="social"><a href="https://github.com/BachrulPanji" target="_blank"><i
+                            class="fa-brands fa-github"></i></a></div>
             </div>
         </footer>
     </div>
 
-
-
     <div class="nav-touch-close" id="nav-tc-js"></div>
-
-    <script type="text/javascript" src="../script/script.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("Email Js API Key (keep it in .env file or seperately)");
-        })();
-    </script>
-
+    <script type="text/javascript" src="../script/script.js" defer></script>
 </body>
 
 </html>

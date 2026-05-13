@@ -10,18 +10,20 @@
 }
 
 :root {
-	/* --bg-color: radial-gradient(circle at 60% 50%, rgba(238,174,202,1) 0%, rgb(127, 172, 224) 100%); */
-	--bg-color: radial-gradient(circle at 70% 50%, rgba(238, 174, 202, 1) 0%, rgb(145, 167, 192) 100%);
-	--text-color: #363636;
-	--main-color: rgb(12, 174, 214);
-	/* --main-color: hsl(250, 52%, 36%); */
+	--bg-color: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+	--text-color: #f8fafc;
+	--main-color: #0ea5e9;
 }
 
 body {
 	min-height: 100vh;
 	/* position: relative;
 	top: 150px; */
-	background: var(--bg-color);
+	background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(2, 6, 23, 0.85)), url('../../Assets/bg-dark.png');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	color: var(--text-color);
 }
 
@@ -1813,3 +1815,444 @@ header.scrolled {
 		row-gap: 10px;
 	}
 }
+
+/* ==========================================================================
+   Elegant Redesign UI System (APPENDED)
+   ========================================================================== */
+
+/* Glassmorphism Variables (Optimized for Dark Mode) */
+:root {
+    --glass-bg: rgba(30, 41, 59, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(12px);
+    --premium-gradient: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Base Elegant Container */
+.elegant-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-main {
+    min-height: 80vh;
+    padding-top: 100px; /* Header clearance */
+}
+
+/* Section Header */
+.modern-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.modern-header h1 {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.modern-header .underline {
+    width: 80px;
+    height: 4px;
+    background: var(--premium-gradient);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Glassmorphism Cards */
+.elegant-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.elegant-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--main-color);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--premium-gradient);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 10px 20px rgba(12, 174, 214, 0.3);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Projects Grid */
+.projects-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .projects-modern-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .projects-modern-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.project-modern-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-modern-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--main-color);
+    box-shadow: var(--card-shadow);
+}
+
+.project-img-wrapper {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Image Hover Overlay */
+.img-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(20px);
+}
+
+.project-img-wrapper:hover .img-hover-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-modern-card:hover .project-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Hover Buttons */
+.hover-btn {
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hover-btn:hover {
+    background: var(--main-color);
+    color: white;
+    transform: scale(1.15) rotate(10deg);
+}
+
+.project-info-elegant {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info-elegant h3 {
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.project-info-elegant p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.project-badge {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    background: rgba(12, 174, 214, 0.15);
+    color: var(--main-color);
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid rgba(12, 174, 214, 0.2);
+}
+
+
+
+/* Contact Elegant Redesign */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contact-info-glass {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item-glass {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.info-item-glass i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--premium-gradient);
+    border-radius: 10px;
+    color: white;
+}
+
+.modern-form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.modern-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.modern-form-group input, 
+.modern-form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.modern-form-group input:focus, 
+.modern-form-group textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+}
+
+.btn-premium {
+    width: 100%;
+    padding: 14px;
+    background: var(--premium-gradient);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(12, 174, 214, 0.2);
+}
+
+.btn-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(12, 174, 214, 0.4);
+    filter: brightness(1.1);
+}
+
+.contact-submit-after.show {
+    opacity: 1 !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Certificate Design Updates */
+.certificate-card {
+    width: 600px !important;
+    border-radius: 20px !important;
+}
+
+.certificate-card .image {
+    position: relative;
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.certificate-card .image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 10px !important;
+    border: 2px solid var(--main-color) !important;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card .eye-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.certificate-card .eye-overlay i {
+    color: white;
+    font-size: 2rem;
+}
+
+.certificate-card .image:hover img {
+    transform: scale(1.05);
+}
+
+.certificate-card .image:hover .eye-overlay {
+    opacity: 1;
+}
+
+/* Certificate Modal */
+.cert-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.cert-modal .modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border: 3px solid var(--main-color);
+}
+
+.cert-modal .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cert-modal .close-modal:hover {
+    color: var(--main-color);
+}
+
+@media (max-width: 640px) {
+    .certificate-card .image {
+        width: 100%;
+        height: auto;
+    }
+}

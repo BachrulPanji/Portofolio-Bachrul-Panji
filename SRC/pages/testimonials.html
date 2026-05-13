@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Testimonials</title>
+    <title>Certificates</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="icon" href="../../Assets/favicons/favicon.png" type="image/png" sizes="32x32">
 
@@ -20,12 +20,12 @@
 
         <div class="navbar">
             <a href="../../index.html">Home</a>
-            <a href="../../index.html">skills</a>
-            <a href="../../SRC/pages/MyProject.html">My Project</a>
-            <a href="../../SRC/pages/gallery.html">Gallery</a>
-            <a href="../../SRC/pages/career.html">Career</a>
-            <a href="../../SRC/pages/hobbies.html">Hobbies</a>
-            <a href="../../SRC/pages/testimonials.html" class="active">Testimonials</a>
+            <a href="skills.html">Skills</a>
+            <a href="MyProject.html">MyProject</a>
+            <a href="gallery.html">Layanan</a>
+            <a href="career.html">Career</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="testimonials.html" class="active">Penghargaan</a>
         </div>
 
         <div class="main">
@@ -41,101 +41,178 @@
         <main class="testimonials-main">
             <div class="testimonials-section">
                 <div class="testimonials-header">
-                    <div class="header-text">What Others Say About Me</div>
+                    <div class="header-text">My Certificates</div>
                     <div class="header-line"></div>
                 </div>
                 <div class="section">
                     <div class="row">
-                        <!-- <div class="test1"> -->
-                        <div class="block maddat">
-                            <div class="image">
-                                <img src="../../Assets/testimonials/tester 1.png" alt="">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 1.jpeg')">
+                                <img src="../../Assets/testimonials/SR 1.jpeg" alt="Certificate 1">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
                             </div>
                             <div class="content">
                                 <div class="content-row">
-                                    <div class="name">Name</div>
-                                    <div class="description">A colleague from Address</div>
+                                    <div class="name">Cyber Intelligence Forum</div>
+                                    <div class="description">Cyber Intelligence Forum Indonesia</div>
                                     <div class="line"></div>
                                 </div>
                                 <div class="text">
-                                    Madhav is not just a talented web developer but also an amazing friend. His
-                                    dedication
-                                    to his work and warm personality make him someone you can always rely on. I'm
-                                    proud
-                                    to
-                                    call him a friend and collaborator.
+                                    Attended the Cyber Intelligence Forum Indonesia focusing on the "Threat Landscape
+                                    for Indonesia's Digital Leaders".
                                 </div>
                             </div>
                         </div>
-                        <div class="block oasis">
-                            <div class="image">
-                                <img src="../../Assets/testimonials/tester 1.png" alt="">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 2.jpeg')">
+                                <img src="../../Assets/testimonials/SR 2.jpeg" alt="Certificate 2">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
                             </div>
                             <div class="content">
                                 <div class="content-row">
-                                    <div class="name">Name</div>
-                                    <div class="description">A colleague from Address</div>
+                                    <div class="name">IT Career Preparation</div>
+                                    <div class="description">Alterra Academy</div>
                                     <div class="line"></div>
                                 </div>
                                 <div class="text">
-                                    Riton's creativity knows no bounds! From brainstorming ideas to executing projects
-                                    flawlessly, he's the go-to person for anything innovative.
+                                    Successfully completed the IT Career Preparation Program Batch 6 held by Alterra
+                                    Academy.
                                 </div>
                             </div>
                         </div>
-                        <!-- </div> -->
                     </div>
                     <div class="row">
-                        <!-- <div class="test1"> -->
-                        <div class="block sudip">
-                            <div class="image">
-                                <img src="../../Assets/testimonials/tester 1.png" alt="">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 3.jpeg')">
+                                <img src="../../Assets/testimonials/SR 3.jpeg" alt="Certificate 3">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
                             </div>
                             <div class="content">
                                 <div class="content-row">
-                                    <div class="name">Name</div>
-                                    <div class="description">A colleague from Address</div>
+                                    <div class="name">Cyber Security Webinar</div>
+                                    <div class="description">Mercu Buana University</div>
                                     <div class="line"></div>
                                 </div>
                                 <div class="text">
-                                    Riton is not only a tech enthusiast but also a passionate musician. His ability to
-                                    balance both worlds and excel in each is a testament to his incredible work ethic
-                                    and
-                                    talent.
+                                    Participated in the "How to Maintain Digital Security in Cyberspace" webinar
+                                    organized by the Information Systems Student Association.
                                 </div>
                             </div>
                         </div>
-                        <div class="block subin">
-                            <div class="image">
-                                <img src="../../Assets/testimonials/tester 1.png" alt="">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 4.jpeg')">
+                                <img src="../../Assets/testimonials/SR 4.jpeg" alt="Certificate 4">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
                             </div>
                             <div class="content">
                                 <div class="content-row">
-                                    <div class="name">Name</div>
-                                    <div class="description">A colleague from Address</div>
+                                    <div class="name">Exclusive Tech Webinar</div>
+                                    <div class="description">Alterra Academy</div>
                                     <div class="line"></div>
                                 </div>
                                 <div class="text">
-                                    I've known Riton for years, and his dedication to learning and adapting to new
-                                    challenges is inspiring. He's always the first to lend a helping hand in any
-                                    tech-related dilemma.
+                                    Successfully participated in the "How To Get a Job Ready in 2022" tech webinar as a
+                                    Participant.
                                 </div>
                             </div>
                         </div>
-                        <!-- </div> -->
+                    </div>
+                    <div class="row">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 6.jpeg')">
+                                <img src="../../Assets/testimonials/SR 6.jpeg" alt="Certificate 6">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <div class="content">
+                                <div class="content-row">
+                                    <div class="name">Backend Developer</div>
+                                    <div class="description">Archilab Academy</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="text">
+                                    Recognized as a participant in the "How to Start Your Professional Career as Backend
+                                    Developer" webinar.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 8.jpeg')">
+                                <img src="../../Assets/testimonials/SR 8.jpeg" alt="Certificate 8">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <div class="content">
+                                <div class="content-row">
+                                    <div class="name">Full Stack Web Dev</div>
+                                    <div class="description">Harisenin.com</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="text">
+                                    Contributed as a participant in the Harisenin Career Conference focusing on Full
+                                    Stack Web Development.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/SR 9.jpeg')">
+                                <img src="../../Assets/testimonials/SR 9.jpeg" alt="Certificate 9">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <div class="content">
+                                <div class="content-row">
+                                    <div class="name">Cyber Security</div>
+                                    <div class="description">Course-Net Indonesia</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="text">
+                                    Awarded for the successful completion of the Fundamental of Cyber Security training
+                                    program.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block certificate-card">
+                            <div class="image cert-img-wrapper"
+                                onclick="openCertModal('../../Assets/testimonials/speaker.jpeg')">
+                                <img src="../../Assets/testimonials/speaker.jpeg" alt="Certificate 10">
+                                <div class="eye-overlay"><i class="fas fa-eye"></i></div>
+                            </div>
+                            <div class="content">
+                                <div class="content-row">
+                                    <div class="name">Speaker for Javascript learners</div>
+                                    <div class="description">Speaker at Google</div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="text">
+                                    speaker certificate at Google events for basic to expert Javascript learners.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
         <footer class="footer">
             <div class="left">
-                &copy; 2023 • BPG • All Rights Reserved
+                &copy; 2024 • BPG • All Rights Reserved
             </div>
             <div class="right">
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
-                <div class="social"><a href="#" target="_blank"><i class="fa-brands fa-github"></i></a></div>
+                <div class="social"><a href="#https://www.youtube.com/channel/UCg6xerEubVDBWDwulwr1qaQ"
+                        target="_blank"><i class="fa-brands fa-youtube"></i></a></div>
+                <div class="social"><a href="#https://www.instagram.com/bachrul_panji_gumilang/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></div>
+                <div class="social"><a href="#https://id.linkedin.com/in/bachrul-panji-gumilang-92a1621ba"
+                        target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="social"><a href="#https://github.com/BachrulPanji" target="_blank"><i
+                            class="fa-brands fa-github"></i></a></div>
             </div>
         </footer>
     </div>
@@ -145,6 +222,12 @@
 
 
     <div class="nav-touch-close" id="nav-tc-js"></div>
+
+    <!-- Modal for viewing certificate -->
+    <div id="certModal" class="cert-modal">
+        <span class="close-modal" onclick="closeCertModal()">&times;</span>
+        <img class="modal-content" id="certImage">
+    </div>
 
     <script type="text/javascript" src="../script/script.js"></script>
 
