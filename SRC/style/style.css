@@ -195,11 +195,13 @@ header.scrolled {
 
 
 .column.right img {
-	max-width: 250px;
+	max-width: 450px;
+	min-width: 300px;
+	width: 100%;
+	height: auto;
 	margin-left: 50px;
 	border-radius: 20px 100px 20px 20px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .about .text {
