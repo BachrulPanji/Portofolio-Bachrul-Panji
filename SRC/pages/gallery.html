@@ -59,7 +59,7 @@
                             <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i> Data
                                 Management</li>
                             <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
-                                Workflow Automation</li>
+                                Aplikasi App Script</li>
                             <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
                                 Document Support</li>
                         </ul>
@@ -78,8 +78,7 @@
                                 Website Portofolio</li>
                             <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
                                 E-Commerce Solution</li>
-                            <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i> API
-                                Integration</li>
+                            <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>Undangan Digital</li>
                         </ul>
                     </div>
 
@@ -100,12 +99,29 @@
                                 Security Training</li>
                         </ul>
                     </div>
+
+                    <!-- Service 3: Disainer -->
+                    <div class="elegant-card service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Disain UI UX</h3>
+                        <p>Arsitektur pertahanan siber komprehensif untuk melindungi aset digital vital Anda. Layanan kami mencakup audit kerentanan proaktif, pengujian penetrasi mendalam (ethical hacking), dan implementasi protokol enkripsi tingkat lanjut guna menjamin kerahasiaan data.</p>
+                        <ul
+                            style="list-style: none; text-align: left; font-size: 0.9rem; opacity: 0.7; margin-top: 10px;">
+                            <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
+                                Disain Website Portofolio</li>
+                            <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
+                                Disain E-Commerce</li>
+                            <li><i class="fas fa-check" style="color: var(--main-color); margin-right: 5px;"></i>
+                                Dasain Udangan Digital</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div style="text-align: center; margin-top: 60px;">
-                    <a href="contact.html" class="btn-premium"
-                        style="display: inline-block; text-decoration: none;">Konsultasi Sekarang</a>
-                </div>
+                <!-- <div style="text-align: center; margin-top: 60px; margin-bottom: 10px;">
+                    <p style="font-size: 0.95rem; opacity: 0.6;">Ada pertanyaan? Klik ikon chat di pojok kanan bawah 💬</p>
+                </div> -->
             </div>
         </main>
 
@@ -127,7 +143,43 @@
     </div>
 
     <div class="nav-touch-close" id="nav-tc-js"></div>
+
+    <!-- ===== FLOATING CHATBOT ===== -->
+    <!-- Toggle Button -->
+    <button class="chatbot-fab" id="chatbotFab" onclick="toggleChatbot()" aria-label="Buka Chat">
+        <i class="fas fa-comment-dots chatbot-fab-icon" id="chatbotFabIcon"></i>
+        <span class="chatbot-fab-badge" id="chatbotBadge">1</span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                <div>
+                    <div class="chatbot-name">Panji Assistant</div>
+                    <div class="chatbot-status"><span class="chatbot-dot"></span> Online</div>
+                </div>
+            </div>
+            <button class="chatbot-close" onclick="toggleChatbot()" aria-label="Tutup">&times;</button>
+        </div>
+
+        <div class="chatbot-messages" id="chatbotMessages">
+            <!-- messages rendered by JS -->
+        </div>
+
+        <div class="chatbot-quick-replies" id="chatbotQuickReplies"></div>
+
+        <div class="chatbot-input-row">
+            <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Ketik pesan..."
+                onkeydown="if(event.key==='Enter') sendChatMessage()" autocomplete="off">
+            <button class="chatbot-send" onclick="sendChatMessage()" aria-label="Kirim">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <!-- ===== END CHATBOT ===== -->
+
     <script type="text/javascript" src="../script/script.js" defer></script>
 </body>
-
 </html>
