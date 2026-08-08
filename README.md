@@ -1,39 +1,61 @@
-👋 Halo, saya **Bachrul**, seorang pengembang front-end yang bersemangat dengan keahlian dalam **keamanan siber** dan **ethical hacking**. Misi saya adalah menciptakan situs web yang responsif dan menawan secara visual, sambil memastikan bahwa situs tersebut aman dari potensi ancaman siber. Portofolio ini menampilkan proyek-proyek yang telah saya kerjakan, menggabungkan desain web kreatif dengan prinsip keamanan yang kuat.
+# Portofolio Bachrul Panji 🚀
 
-## 🛠 Keterampilan dan Teknologi
+Halo, saya **Bachrul Panji Gumilang** — seorang **Front-End Web Developer** yang bersemangat dengan keahlian di bidang **Cyber Security** dan **Ethical Hacking**. Portofolio ini dibangun dengan **Next.js** (App Router) dan di-deploy sebagai **static export**, menampilkan project, sertifikasi, layanan, dan perjalanan karir saya.
 
-- **Pengembangan Front-End**: HTML, CSS, JavaScript, React.js, Vue.js
-- **Keamanan Siber**: Penilaian kerentanan, Pengujian penetrasi, Ethical hacking
-- **Alat**: Git, VS Code, Webpack, Nmap, Wireshark, OWASP ZAP
-- **Praktik Keamanan Terbaik**: OWASP Top 10, Kode yang aman, Perlindungan data
-- **Teknologi Lain**: SASS, Bootstrap, Tailwind CSS
+## ✨ Fitur
 
-## 🌟 Proyek
+- ⚡ **Next.js 13** (App Router) + React 18
+- 🎨 Desain modern *glassmorphism* dengan dark/light mode
+- ⌨️ Efek *typing animation* di hero
+- 📊 Statistik & *skill bars* animasi
+- 🗂️ Filter sertifikat + lightbox modal project
+- 📱 Fully responsive (mobile menu)
+- 🔍 SEO metadata + Open Graph + favicon
+- 🚀 Static export untuk GitHub Pages / Vercel
 
-Berikut adalah beberapa proyek favorit saya yang menunjukkan keterampilan pengembangan front-end saya dan fokus pada keamanan web.
+## 🛠️ Teknologi
 
-### 1. **Situs Portofolio yang Aman**
-- **Deskripsi**: Situs portofolio pribadi yang dirancang untuk menampilkan karya saya sambil mengikuti praktik terbaik dalam keamanan web (misalnya, header yang aman, kebijakan keamanan konten).
-- **Teknologi**: HTML, CSS, JavaScript, SSL/TLS untuk koneksi yang aman
-- **Fokus**: Autentikasi pengguna yang aman dan penanganan cookie yang aman.
+- **Framework**: Next.js, React
+- **Styling**: CSS custom dengan CSS variables (dark & light theme)
+- **Icons**: react-icons
+- **Animasi**: Intersection Observer (scroll reveal), CSS keyframes
 
-### 2. **Platform E-commerce dengan Fitur Keamanan**
-- **Deskripsi**: Sebuah platform e-commerce sederhana yang mencakup fitur keamanan penting seperti enkripsi, penanganan input pengguna yang aman, dan perlindungan terhadap SQL injection.
-- **Teknologi**: React.js, Node.js, Express, MongoDB
-- **Fokus**: Penerapan prinsip OWASP top 10 dan pemantauan kerentanan secara real-time.
+## 🚀 Menjalankan Lokal
 
-### 3. **Simulasi Pengujian Penetrasi**
-- **Deskripsi**: Lingkungan aplikasi web simulasi yang dirancang untuk menampilkan kerentanan web umum dan cara memperbaikinya.
-- **Teknologi**: PHP, MySQL, Metasploit, OWASP ZAP
-- **Fokus**: Identifikasi dan remediasi kerentanan, termasuk XSS, CSRF, dan SQL Injection.
+```bash
+npm install
+npm run dev
+```
 
-## 🚀 Tujuan
-Tujuan jangka panjang saya adalah terus meningkatkan keterampilan pengembangan saya sambil membantu perusahaan membangun aplikasi web yang aman dan ramah pengguna, yang memenuhi standar keamanan tertinggi.
+Buka [http://localhost:3000](http://localhost:3000).
 
-## 📫 Mari Terhubung
+## 📦 Build Produksi
 
-Jangan ragu untuk menghubungi saya jika Anda ingin berkolaborasi dalam sebuah proyek atau mendiskusikan apa pun terkait pengembangan web dan keamanan siber!
+```bash
+npm run build
+```
 
-- **GitHub**: [GitHub Bachrul](https://github.com/bachrul0038)
-- **LinkedIn**: [LinkedIn Bachrul](https://linkedin.com/in/bachrulpanji)
-- **Email**: [your.email@example.com](bachrulpanji0038@gmail.com)
+Output static berada di folder `out/`.
+
+## 🔧 Struktur Project
+
+```
+├── app/
+│   ├── layout.js          # Root layout + metadata
+│   ├── page.js            # Halaman utama (semua section)
+│   └── globals.css        # Design system
+├── components/            # Section components
+├── lib/
+│   ├── data.js            # Semua data konten
+│   ├── icons.jsx          # Mapping icons
+│   └── useActiveSection.js
+├── public/assets/         # Gambar & favicon
+└── next.config.mjs        # Static export config
+```
+
+## 📫 Kontak
+
+- **GitHub**: [github.com/BachrulPanji](https://github.com/BachrulPanji)
+- **LinkedIn**: [Bachrul Panji Gumilang](https://id.linkedin.com/in/bachrul-panji-gumilang-92a1621ba)
+- **Instagram**: [@bagol28](https://www.instagram.com/bachrul_panji_gumilang/)
+- **Email**: bachrulpanji0038@gmail.com
